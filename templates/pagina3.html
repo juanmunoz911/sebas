@@ -1,0 +1,113 @@
+{% extends "layout.html" %}  <!--Coloca el codigo del archivo layout.html-->
+
+{% block content %}  <!--Bloque de contenido: Imagenes, texto propio de la pagina-->
+
+<!--instructor-->
+<br>
+<form action="/agregar_instructor" method="post">
+<center>
+  <br>
+<table>
+
+</tr> 
+<!--Fila 1 >-->
+<tr>
+  <td>  <label for="id_instructor">Documento Identidad: </label></td>
+  <td>  <input type="int" id="id_instructor" name="id_instructor" /><br></td>
+</tr> 
+
+<!--Fila 2 >-->
+<tr>
+  <td>  <label for="nom_instructor">nombre: </label></td>
+  <td>  <input type="text" id="nom_instructor" name="nom_instructor" /><br></td>
+</tr> 
+
+<!--Fila 3 >-->
+<tr>
+  <td>  <label for="apell_instructor">apellido: </label></td>
+  <td>  <input type="text" id="apell_instructor" name="apell_instructor" /><br></td>
+</tr> 
+
+<!--Fila 4 >-->
+<tr>
+  <td>  <label for="edad_instructor">edad: </label></td>
+  <td>  <input type="text" id="edad_instructor" name="edad_instructor" /><br></td>
+</tr> 
+
+<!--Fila 5 >-->
+<tr>
+  <td>  <label for="cel_instructor">celular: </label></td>
+  <td>  <input type="text" id="cel_instructor" name="cel_instructor" /><br></td>
+</tr> 
+
+<!--Fila 7 >-->
+<tr>
+  <td>  <label for="correo_instructor">correo: </label></td>
+  <td>  <input type="varchar" id="correo_instructor" name="correo_instructor" /><br></td>
+</tr>
+
+<!--Fila 8 >-->
+<tr>
+  <td>  <label for="exp_instructor">experiencia: </label></td>
+  <td>  <input type="text" id="exp_instructor" name="exp_instructor" /><br></td>
+</tr>
+
+<!--Fila 9 >-->
+<tr>
+  <td>  <label for="id_cliente">id_cliente: </label></td>
+  <td>  <input type="int" id="id_cliente" name="id_cliente" /><br></td>
+</tr>
+
+
+</table>
+<br>
+<br>
+  <input type="submit" id="boton_registrar" name="boton_registrar" value="Registrar" />
+  </center>
+  <br>
+</form>
+<br>
+<br>
+<br>
+
+<center>
+<table class="lista">
+<thead>
+  <br>
+<tr>
+  <td class="resultado1">id_instructor</td>
+  <td class="resultado1">nom_instructor</td>
+  <td class="resultado1">apell_instructor</td>
+  <td class="resultado1">edad_instructor</td>
+  <td class="resultado1">cel_instructor</td>
+  <td class="resultado1">correo_instructor</td>
+  <td class="resultado1">exp_instructor</td>
+  <td class="resultado1">id_cliente</td>
+
+
+</tr>
+</thead>
+</center>
+<tbody>
+  {% for instructor in instructor %}
+    <tr>
+      <td class="resultado2">{{instructor.0}}</td>
+      <td class="resultado2">{{instructor.1}}</td>
+      <td class="resultado2">{{instructor.2}}</td>
+      <td class="resultado2">{{instructor.3}}</td>
+      <td class="resultado2">{{instructor.4}}</td>
+      <td class="resultado2">{{instructor.5}}</td>
+      <td class="resultado2">{{instructor.6}}</td>
+      <td class="resultado2">{{instructor.7}}</td>
+      <td class="resultado2">
+
+      <a class="editar-button" href="/editarinstructor/{{instructor.0}}">Editar</a>
+      <br>
+      <a class="eliminar-button" href="/borrarinstructor/{{instructor.0}}">Eliminar</a>
+    </tr>
+  {% endfor %}
+
+</tbody>
+</table>
+
+{% endblock %}  <!--Bloque de contenido-->

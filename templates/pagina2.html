@@ -1,0 +1,159 @@
+{% extends "layout.html" %}  <!--Coloca el codigo del archivo layout.html-->
+
+{% block content %}  <!--Bloque de contenido: Imagenes, texto propio de la pagina-->
+
+<!--Clientes  -->
+<br>
+<form action="/agregar_cliente" method="post">
+<center>
+  <br>
+<table>
+
+<!--Fila 1 >-->
+<tr>
+  <td>  <label for="tipo_documento ">Tipo Documento Identidad: </label></td>
+  <td>  <input type="text" id="tipo_documento" name="tipo_documento" /><br></td>
+</tr> 
+
+
+<!--Fila 2 >-->
+<tr>
+    <td>  <label for="id_cliente ">Documento Identidad: </label></td>
+    <td>  <input type="int" id="id_cliente" name="id_cliente" /><br></td>
+  </tr> 
+
+
+<!--Fila 3 >-->
+<tr>
+    <td>  <label for="nom_cliente">nombres: </label></td>
+    <td>  <input type="text" id="nom_cliente" name="nom_cliente" /><br></td>
+  </tr> 
+
+<!--Fila 4 >-->
+<tr>
+    <td>  <label for="apell_cliente">apellidos: </label></td>
+    <td>  <input type="text" id="apell_cliente" name="apell_cliente" /><br></td>
+  </tr> 
+
+<!--Fila 5 >-->
+<tr>
+    <td>  <label for="edad_cliente">edad: </label></td>
+    <td>  <input type="text" id="edad_cliente" name="edad_cliente" /><br></td>
+  </tr> 
+
+<!--Fila 6 >-->
+<tr>
+    <td>  <label for="peso_cliente">peso: </label></td>
+    <td>  <input type="text" id="peso_cliente" name="peso_cliente" /><br></td>
+  </tr> 
+
+<!--Fila 7 >-->
+<tr>
+    <td>  <label for="tsangre_cliente">Tipo de sangre: </label></td>
+    <td>  <input type="varchar" id="tsangre_cliente" name="tsangre_cliente" /><br></td>
+  </tr> 
+
+  
+<!--Fila 8 >-->
+<tr>
+    <td>  <label for="condmedica_cliente">Condicion medica: </label></td>
+    <td>  <input type="text" id="condmedica_cliente" name="condmedica_cliente" /><br></td>
+  </tr> 
+
+  <!--Fila 9 >-->
+<tr>
+  <td>  <label for="cel_cliente">Celular: </label></td>
+  <td>  <input type="int" id="cel_cliente" name="cel_cliente" /><br></td>
+</tr> 
+
+<!--Fila 10 >-->
+<tr>
+  <td>  <label for="correo_cliente">Correo: </label></td>
+  <td>  <input type="varchar" id="correo_cliente" name="correo_cliente" /><br></td>
+</tr>  
+
+<!--Fila 11 >-->
+<tr>
+  <td>  <label for="id_rutina"> id_rutina: </label></td>
+  <td>  <input type="int" id="id_rutina" name="id_rutina" /><br></td>
+</tr> 
+
+<!--Fila 12 >-->
+<tr>
+  <td>  <label for="id_maquina">id_maquina: </label></td>
+  <td>  <input type="int" id="id_maquina" name="id_maquina" /><br></td>
+</tr>
+
+<!--Fila 13 >-->
+<tr>
+  <td>  <label for="id_producto">id_producto: </label></td>
+  <td>  <input type="int" id="id_producto" name="id_producto" /><br></td>
+</tr>
+
+</table>
+<br>
+
+    <input type="submit" id="boton_registrar" name="boton_registrar" value="Registrar" />
+    <br>
+</center>
+<br>
+</form>
+
+<br>
+<br>
+<br>
+<center>
+<table class="lista">
+  <thead>
+  <tr>
+    <td class="resultado1">tipo_documento</td>
+    <td class="resultado1">id_cliente</td>
+    <td class="resultado1">nom_cliente</td>
+    <td class="resultado1">apell_cliente</td>
+    <td class="resultado1">edad_cliente</td>
+    <td class="resultado1">peso_cliente</td>
+    <td class="resultado1">tsangre_cliente</td>
+    <td class="resultado1">condmedica_cliente</td>
+    <td class="resultado1">cel_cliente</td>
+    <td class="resultado1">correo_cliente</td>
+    <td class="resultado1">id_rutina</td>
+    <td class="resultado1">id_maquina</td>
+    <td class="resultado1">id_producto</td>
+
+
+    
+
+  </tr>
+  </thead>
+</center>
+  <tbody>
+    {% for cliente in clientes %}
+      <tr>
+        <td class="resultado2">{{cliente.0}}</td>
+        <td class="resultado2">{{cliente.1}}</td>
+        <td class="resultado2">{{cliente.2}}</td>
+        <td class="resultado2">{{cliente.3}}</td>
+        <td class="resultado2">{{cliente.4}}</td>
+        <td class="resultado2">{{cliente.5}}</td>
+        <td class="resultado2">{{cliente.6}}</td>
+        <td class="resultado2">{{cliente.7}}</td>
+        <td class="resultado2">{{cliente.8}}</td>
+        <td class="resultado2">{{cliente.9}}</td>
+        <td class="resultado2">{{cliente.10}}</td>
+        <td class="resultado2">{{cliente.11}}</td>
+        <td class="resultado2">{{cliente.12}}</td>
+       
+        <td class="resultado2">
+
+
+
+
+        <a class="editar-button" href="/editarcliente/{{cliente.1}}">Editar</a>
+        <br>
+        <a class="eliminar-button" href="/borrarcliente/{{cliente.1}}">Eliminar</a>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}  <!--Bloque de contenido-->

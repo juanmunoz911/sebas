@@ -1,0 +1,44 @@
+<form action="/actualizarmaquina/{{fac.0}}" method="POST">
+
+    <table>
+    
+      <!--Fila 1 >-->
+<tr>
+  <td>  <label for="id_maquina">id_maquina: </label></td>
+  <td>  <input type="int" id="id_maquina" name="id_maquina" value="{{fac.0}}" /><br></td>
+</tr> 
+
+<!--Fila 2 >-->
+<tr>
+    <td>  <label for="nom_maquina">nombre: </label></td>
+    <td>  <input type="text" id="nom_maquina" name="nom_maquina" value="{{fac.1}}" /><br></td>
+</tr> 
+
+<!--Fila 3 >-->
+<tr>
+    <td>  <label for="numserie_maquina ">numero de serie: </label></td>
+    <td>  <input type="text" id="numserie_maquina " name="numserie_maquina" value="{{fac.2}}" /><br></td>
+</tr>
+
+<!--Fila 4 >-->
+<tr>
+  <td>  <label for="modelo_maquina ">modelo: </label></td>
+  <td>  <input type="text" id="modelo_maquina " name="modelo_maquina" value="{{fac.3}}" /><br></td>
+</tr>
+
+<!--Fila 5 >-->
+<tr>
+  <td>  <label for="peso_maquina ">peso: </label></td>
+  <td>  <input type="text" id="peso_maquina " name="peso_maquina" value="{{fac.4}}" /><br></td>
+</tr>
+
+<!--Fila 6 >-->
+<tr>
+  <td>  <label for="utilidad_maquina ">utilidad: </label></td>
+  <td>  <input type="text" id="utilidad_maquina " name="utilidad_maquina" value="{{fac.5}}" /><br></td>
+</tr>
+
+</table>
+          <input type="submit" id="boton_registrar" name="boton_registrar" value="Editar" />
+      </form>
+  

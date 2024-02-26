@@ -1,0 +1,91 @@
+
+<form action="/actualizarcliente/{{cat.1}}" method="POST">
+
+    <table>
+
+    <!--Fila 1 >-->
+<tr>
+  <td>  <label for="tipo_documento ">tipo Documento Identidad: </label></td>
+  <td>  <input type="text" id="tipo_documento" name="tipo_documento" value="{{cat.0}}" /><br></td>
+ 
+</tr> 
+
+<!--Fila 2 >-->
+<tr>
+    <td>  <label for="id_cliente ">Documento Identidad: </label></td>
+    <td>  <input type="int" id="id_cliente" name="id_cliente" value="{{cat.1}}" /><br></td>
+  </tr> 
+
+
+<!--Fila 3 >-->
+<tr>
+    <td>  <label for="nom_cliente">nombres: </label></td>
+    <td>  <input type="text" id="nom_cliente" name="nom_cliente" value="{{cat.2}}" /><br></td>
+  </tr> 
+
+<!--Fila 4 >-->
+<tr>
+    <td>  <label for="apell_cliente">apellidos: </label></td>
+    <td>  <input type="text" id="apell_cliente" name="apell_cliente" value="{{cat.3}}" /><br></td>
+  </tr> 
+
+<!--Fila 5 >-->
+<tr>
+    <td>  <label for="edad_cliente">edad: </label></td>
+    <td>  <input type="text" id="edad_cliente" name="edad_cliente" value="{{cat.4}}" /><br></td>
+  </tr> 
+
+<!--Fila 6 >-->
+<tr>
+    <td>  <label for="peso_cliente">peso: </label></td>
+    <td>  <input type="text" id="peso_cliente" name="peso_cliente" value="{{cat.5}}" /><br></td>
+  </tr> 
+
+<!--Fila 7 >-->
+<tr>
+    <td>  <label for="tsangre_cliente">Tipo de sangre: </label></td>
+    <td>  <input type="text" id="tsangre_cliente" name="tsangre_cliente" value="{{cat.6}}" /><br></td>
+  </tr> 
+
+  
+<!--Fila 8 >-->
+<tr>
+    <td>  <label for="condmedica_cliente">Condicion medica: </label></td>
+    <td>  <input type="text" id="condmedica_cliente" name="condmedica_cliente" value="{{cat.7}}" /><br></td>
+  </tr> 
+
+  <!--Fila 9 >-->
+<tr>
+  <td>  <label for="cel_cliente">celular: </label></td>
+  <td>  <input type="int" id="cel_cliente" name="cel_cliente" value="{{cat.8}}" /><br></td>
+</tr> 
+
+<!--Fila 10 >-->
+<tr>
+  <td>  <label for="correo_cliente">correo: </label></td>
+  <td>  <input type="text" id="correo_cliente" name="correo_cliente" value="{{cat.9}}" /><br></td>
+</tr>  
+
+<!--Fila 11 >-->
+<tr>
+  <td>  <label for="id_rutina"> id_rutina: </label></td>
+  <td>  <input type="int" id="id_rutina" name="id_rutina" value="{{cat.10}}" /><br></td>
+</tr> 
+
+<!--Fila 12 >-->
+<tr>
+  <td>  <label for="id_maquina">id_maquina: </label></td>
+  <td>  <input type="int" id="id_maquina" name="id_maquina" value="{{cat.11}}" /><br></td>
+</tr>
+
+<!--Fila 13 >-->
+<tr>
+  <td>  <label for="id_producto">id_producto: </label></td>
+  <td>  <input type="int" id="id_producto" name="id_producto" value="{{cat.12}}" /><br></td>
+</tr>
+
+</table>
+    
+        <input type="submit" id="boton_registrar" name="boton_registrar" value="Editar" />
+    </form>
+    

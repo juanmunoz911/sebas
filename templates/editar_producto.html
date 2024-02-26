@@ -1,0 +1,35 @@
+<form action="/actualizarproducto/{{pro.0}}" method="POST">
+
+    <table>
+
+    <!--Fila 1 >-->
+    <tr>
+        <td>  <label for="id_producto">Id_producto: </label></td>
+        <td>  <input type="text" id="id_producto" name="id_producto" value="{{pro.0}}" /><br></td>
+      </tr>  
+
+    <!--Fila 2 >-->
+    <tr>
+      <td>  <label for="nom_producto"> nom_producto: </label></td>
+      <td>  <input type="text" id="nom_producto" name="nom_producto" value="{{pro.1}}" /><br></td>
+    </tr> 
+    
+    <!--Fila 3 >-->
+    <tr>
+        <td>  <label for="valor_producto">Precio: </label></td>
+        <td>  <input type="text" id="valor_producto" name="valor_producto" value="{{pro.2}}" /><br></td>
+      </tr> 
+
+    <!--Fila 4 >-->
+    <tr>
+      <td>  <label for="utilidad_producto">utilidad: </label></td>
+      <td>  <input type="text" id="utilidad_producto" name="utilidad_producto" value="{{pro.3}}" /><br></td>
+    </tr> 
+
+
+
+    </table>
+    
+        <input type="submit" id="boton_registrar" name="boton_registrar" value="Editar" />
+    </form>
+    

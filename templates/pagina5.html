@@ -1,0 +1,88 @@
+
+{% extends "layout.html" %}  <!--Coloca el codigo del archivo layout.html-->
+
+{% block content %}  <!--Bloque de contenido: Imagenes, texto propio de la pagina-->
+
+<!--Producto-->
+<br>
+<form action="/agregar_producto" method="POST">
+<center>
+  <br>
+<table>
+
+<!--Fila 1 >-->
+<tr>
+  <td>  <label for="id_producto">id_producto: </label></td>
+  <td>  <input type="text" id="id_producto" name="id_producto" /><br></td>
+</tr>  
+
+<!--Fila 2 >-->
+<tr>
+    <td>  <label for="nom_producto">nombre: </label></td>
+    <td>  <input type="text" id="nom_producto" name="nom_producto" /><br></td>
+  </tr> 
+
+
+<!--Fila 3 >-->
+<tr>
+    <td>  <label for="valor_producto">Precio: </label></td>
+    <td>  <input type="text" id="valor_producto" name="valor_producto" /><br></td>
+</tr> 
+
+<!--Fila 4 >-->
+<tr>
+    <td>  <label for="utilidad_producto">utilidad: </label></td>
+    <td>  <input type="text" id="utilidad_producto" name="utilidad_producto" /><br></td>
+</tr> 
+
+
+</table>
+<br>
+    <input type="submit" id="boton_registrar" name="boton_registrar" value="Registrar" />
+</center>
+<br>
+</form>
+
+
+<br>
+<br>
+<br>
+<center>
+<table class="lista">
+  <br>
+    <thead>
+    <tr>
+      
+      <td class="resultado1">id_producto</td>
+      <td class="resultado1">nom_producto</td>
+      <td class="resultado1">valor_producto</td>
+      <td class="resultado1">utilidad_producto</td>
+      
+      
+      
+    </tr>
+    </thead>
+  </center>
+    <tbody>
+      {% for producto in producto %}
+        <tr>
+          <td  class="resultado2">{{producto.0}}</td>
+          <td  class="resultado2">{{producto.1}}</td>
+          <td  class="resultado2">{{producto.2}}</td>
+          <td  class="resultado2">{{producto.3}}</td>
+          
+          <td class="resultado2">
+    
+          <a class="editar-button" href="/editarproducto/{{producto.0}}">Editar</a>
+          <br>
+         <a class="eliminar-button" href="/borrarproducto/{{producto.0}}">Eliminar</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+
+
+
+{% endblock %}  <!--Bloque de contenido-->

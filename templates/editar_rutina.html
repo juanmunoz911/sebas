@@ -1,0 +1,34 @@
+<form action="/actualizarrutina/{{fac.0}}" method="POST">
+
+    <table>
+    
+    <!--Fila 1 >-->
+<tr>
+  <td>  <label for="id_rutina">id_rutina: </label></td>
+  <td>  <input type="text" id="id_rutina" name="id_rutina" value="{{fac.0}}" /><br></td>
+</tr> 
+
+
+<!--Fila 2 >-->
+<tr>
+    <td>  <label for="aliment_rutina">alimentacion: </label></td>
+    <td>  <input type="text" id="aliment_rutina" name="aliment_rutina" value="{{fac.1}}" /><br></td>
+  </tr>
+  
+  <!--Fila 3 >-->
+<tr>
+  <td>  <label for="intensidad_rutina">intensidad: </label></td>
+  <td>  <input type="text" id="intensidad_rutina" name="intensidad_rutina" value="{{fac.2}}" /><br></td>
+</tr>
+
+<!--Fila 4 >-->
+<tr>
+  <td>  <label for="dias_rutina">dias: </label></td>
+  <td>  <input type="text" id="dias_rutina" name="dias_rutina" value="{{fac.3}}"/><br></td>
+</tr>
+
+</table>
+    
+        <input type="submit" id="boton_registrar" name="boton_registrar" value="Editar" />
+    </form>
+    

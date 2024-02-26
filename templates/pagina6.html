@@ -1,0 +1,80 @@
+
+{% extends "layout.html" %}  <!--Coloca el codigo del archivo layout.html-->
+
+{% block content %}  <!--Bloque de contenido: Imagenes, texto propio de la pagina-->
+
+
+<!--rutina-->
+<br>
+<form action="/agregar_rutina" method="POST">
+<center>
+  <br>
+<table>
+
+<!--Fila 1 >-->
+<tr>
+  <td>  <label for="id_rutina">id_rutina: </label></td>
+  <td>  <input type="int" id="id_rutina" name="id_rutina" /><br></td>
+</tr> 
+
+
+<!--Fila 2 >-->
+<tr>
+    <td>  <label for="aliment_rutina">alimentacion: </label></td>
+    <td>  <input type="text" id="aliment_rutina" name="aliment_rutina" /><br></td>
+  </tr>
+  
+  <!--Fila 3 >-->
+<tr>
+  <td>  <label for="intensidad_rutina">intensidad: </label></td>
+  <td>  <input type="text" id="intensidad_rutina" name="intensidad_rutina" /><br></td>
+</tr>
+
+<!--Fila 4 >-->
+<tr>
+  <td>  <label for="dias_rutina">dias: </label></td>
+  <td>  <input type="text" id="dias_rutina" name="dias_rutina" /><br></td>
+</tr>
+
+</table>
+<br>
+    <input type="submit" id="boton_registrar" name="boton_registrar" value="Registrar" />
+    <br>
+</center>
+</form>
+
+<br>
+<br>
+<br>
+<center>
+<table class="lista">
+  <br>
+  <thead>
+  <tr>
+    <td class="resultado1">id_rutina</td>
+    <td class="resultado1">aliment_rutina</td>
+    <td class="resultado1">intensidad_rutina</td>
+    <td class="resultado1">dias_rutina</td>
+    
+  </tr>
+  </thead>
+</center>
+  <tbody>
+    {% for rutina in rutina %}
+      <tr>
+        <td class="resultado2">{{rutina.0}}</td>
+        <td class="resultado2">{{rutina.1}}</td>
+        <td class="resultado2">{{rutina.2}}</td>
+        <td class="resultado2">{{rutina.3}}</td>
+        
+        <td class="resultado2">
+
+       <a class="editar-button" href="/editarrutina/{{rutina.0}}">Editar</a>
+       <br>
+       <a class="eliminar-button" href="/borrarrutina/{{rutina.0}}">Eliminar</a>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}  <!--Bloque de contenido-->

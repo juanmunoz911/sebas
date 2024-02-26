@@ -1,0 +1,78 @@
+ <!--Plantilla layout.html que va tener toda la pagina-->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PITBULL GYM</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">PITBULL GYM</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+              
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('pagina2')}}">cliente</a>
+
+              
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('pagina3')}}">instructor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('pagina4')}}">maquina</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('pagina5')}}">producto</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('pagina6')}}">rutina</a>
+              </li>
+
+            </div>
+
+            <div class="c:\Users\SEBASTIAN MUÑOZ\Pictures\18767.jpg">width="100"
+              <p>GIMNASIO</p>
+
+            
+
+            </ul>
+
+
+            
+              
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!--Inicio del Bloque de contenidos-->
+    {% block content%}
+
+     <!--Fin del Bloque de contenidos-->
+    {% endblock %}
+
+
+</body>
+</html>
+
+
+
+
